@@ -2,7 +2,7 @@
 class DP{
     private static function connect_DB(){
         $host = 'localhost';
-        $dbname= 'doan_totnghiep';
+        $dbname= 'quanlibanhang';
         $us= 'root';
         $pass ='';
         try{
@@ -31,7 +31,7 @@ class DP{
     public static function search($search)
     {
         $con = DP::connect_DB();
-        $sql="select * from SANPHAM where tieude like N'%$search%'";
+        $sql="select * from product where name_product like N'%$search%'";
         $result= $con->prepare($sql);
         $result->execute();
         $rowsdata=$result->fetchALL();
