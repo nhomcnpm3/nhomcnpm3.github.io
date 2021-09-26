@@ -1,13 +1,5 @@
 <!-- LogIn Page Start -->
-<?php 
-    $checkaccount = isset($_GET['status']) ? $_GET['status'] : '';
-    if($checkaccount==1){
-        $error = "Your Username or Password is incorrect, please try again";
-    }
-    elseif($checkaccount==0) {
-        $error="Account is locked";
-    }
-?>
+<?php unset($_SESSION['fogot']);unset($_SESSION['phone']);unset($_SESSION['otp'])?>
 <div class="log-in ptb-100 ptb-sm-60">
             <div class="container">
                 <div class="row">
@@ -15,10 +7,10 @@
                     <div class="col-md-6">
                         <div class="well mb-sm-30">
                             <div class="new-customer">
-                                <h3 class="custom-title">new customer</h3>
-                                <p class="mtb-10"><strong>Register</strong></p>
-                                <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made</p>
-                                <a class="customer-btn" href="register.php">continue</a>
+                                <h3 class="custom-title">Khách hàng mới</h3>
+                                <p class="mtb-10"><strong>Đăng ký</strong></p>
+                                <p>Bằng cách tạo tài khoản, bạn sẽ có thể mua sắm nhanh hơn, cập nhật trạng thái đơn hàng và theo dõi các đơn hàng bạn đã thực hiện trước đó</p>
+                                <a class="customer-btn" href="register.php">Tiếp tục</a>
                             </div>
                         </div>
                     </div>
@@ -26,21 +18,25 @@
                     <!-- Returning Customer Start -->
                     <div class="col-md-6">
                         <div class="well">
-                            <div class="return-customer">
-                                <h3 class="mb-10 custom-title">returning customer</h3>
-                                <p class="mb-10"><strong>I am a returning customer</strong></p>
-                                <form action="../DB/db_login.php" method="">
+                            <div class="return-customer login">
+                                <h3 class="mb-10 custom-title">Đăng nhập tài khoản</h3>
+                                <form  method="POST">
+                                <div class="error-text"></div>
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="text" name="email" placeholder="Enter your email address..." id="input-email" class="form-control">
+                                        <br>
+                                        <label>Tên đăng nhập</label>
+                                        <input type="text" name="email" placeholder="Nhập thông tin tài khoản..." id="input-email" class="form-control">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" name="pass" placeholder="Password" id="input-password" class="form-control">
+                                    <div class="form-group field">
+                                        <label>Mật khẩu</label>
+                                        <input type="password" name="pass" placeholder="Mật khẩu" id="input-password" class="form-control">
+                                        <i class="fas fa-eye" style="margin:10px 0px"></i>
                                     </div>
-                                    <p style="color:red;"><?php echo $error ?><p>
-                                    <p class="lost-password"><a href="forgot-password.php">Forgot password?</a></p>
-                                    <input type="submit" value="Login" class="return-customer-btn">
+                                    <p class="lost-password"><a href="forgot-password.php">Quên mật khẩu?</a></p>
+                                    <div class="field button">
+                                    <input type="submit" value="Đăng nhập" class="return-customer-btn">
+                                    
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -52,3 +48,5 @@
             <!-- Container End -->
         </div>
         <!-- LogIn Page End -->
+        <script src="../js/javascriptwb/pass-show-hide.js"></script>
+        <script src="../js/javascriptwb/login.js"></script>
