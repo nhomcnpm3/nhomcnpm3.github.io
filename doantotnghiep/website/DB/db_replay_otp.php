@@ -9,24 +9,17 @@
         }
         return $result;
     }
-    $phone  = isset($_POST['phone']) ? $_POST['phone'] : '';  
-    $uni_acc=DP::run_query("SELECT * from account where phone='$phone'",[],2);
+    $phone=$_SESSION['phone'];
     if(!empty($phone)){
-        if($uni_acc[0][0]!=''){
             $otp=generate_otp();
-            $uni_acc1=DP::run_query("UPDATE account set token='$otp' where phone='$phone'",[],1);
+            $uni_acc=DP::run_query("UPDATE account set token='$otp' where phone='$phone'",[],1);
             $_SESSION['otp']=$otp;
-            $_SESSION['phone']=$phone;
             $_SESSION['fogot']='1';
             header("Location: ../page/forgot-password.php");
         }else{
-            $_SESSION['error']="Không tồn tại số";
+            $_SESSION['error']="vui lòng làm mới trang.";
             header("Location: ../page/forgot-password.php");
         }
-    }else{
-        $_SESSION['error']="Không được để trống";
-        header("Location: ../page/forgot-password.php");
-    }
     
 
     ?>

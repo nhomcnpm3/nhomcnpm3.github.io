@@ -26,3 +26,4 @@
                         </div>
                     </div>
                 </form>
+                <?php unset($_SESSION['error'])?>
