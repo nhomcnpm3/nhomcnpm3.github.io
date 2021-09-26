@@ -1,5 +1,5 @@
 ﻿<?php
-    $id=isset($_COOKIE["id"]) ? $_COOKIE["id"] : '';
+$id=isset($_COOKIE["id"]) ? $_COOKIE["id"] : '';
     $err = false;
     $about = false;
     $cart = false;

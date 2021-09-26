@@ -8,7 +8,7 @@
                 <!-- Hot Deal Product Activation Start -->
                 <div class="hot-deal-active owl-carousel">
                 <?php $count=0;
-                    foreach($products as $value){
+                    foreach($sale as $value){
                     ?>
                         <div class="single-product">
                         <!-- Product Image Start -->

@@ -110,7 +110,7 @@
 
    
 
-     <script src="<?php echo $level."js/vendor\jquery-3.2.1.min.js"?>"></script>
+     <script src="<?php echo $level."js\vendor\jquery-3.2.1.min.js"?>"></script>
     <!-- Countdown js -->
     <script src="<?php echo $level."js\jquery.countdown.min.js"?>"></script>
     <!-- Mobile menu js -->

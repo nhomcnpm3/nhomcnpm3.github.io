@@ -1,59 +1,4 @@
-﻿/*--------------------------------------------------
-Template Name: Truemart;
-Description: Responsive Html5 Ecommerce Template;
-Template URI:;
-Author Name:Hastech;
-Author URI:;
-Version: 1.0;
------------------------------------------------------
-
-    CSS INDEX
-    ================
-    1. Theme Default CSS
-    2. Header CSS
-        2.1 Header Top CSS
-        2.2 Header Middle CSS
-        2.3 Header Bottom CSS
-        2.4 Vertical Mobile Menu CSS
-    3. Categorie Menu & Slider Area CSS
-        3.1 Categorie Menu CSS
-        3.2 Slider CSS
-        3.3 All Banner CSS
-    4. Brand Banner Area CSS
-    5. Hot Deal Products CSS
-    6. Arrivals Products CSS
-    7. Like Products CSS
-    8. Support Area CSS
-    9. Newsletter CSS
-    10. Footer CSS
-    11. Home-2 CSS
-    12. Home-3 CSS
-    13. Home-4 CSS
-    14. Blog CSS
-    15. Breadcrumb CSS
-    16. Product Details CSS
-    17. Shop Page CSS
-    18. Quick View CSS
-    19. Login CSS
-    20. Register Account CSS
-    21. Forgot Password CSS
-    22. 404 Page CSS
-    23. Compare Page CSS
-    24. Checkout CSS
-    25. Cart & Wish List CSS
-    26. Terms & Conditions CSS
-    27. About Us CSS
-    28. Contact Us CSS
-    29. Popup Window CSS
-    
------------------------------------------------------*/
-
-/* googel font poppins */
-@import url('css/css.css');
-
-/*----------------------------------------*/
-/* 1. Theme Default CSS
-/*----------------------------------------*/
+﻿@import url('css/css.css');
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -105,8 +50,8 @@ h4 a:hover {
   }
    .field i{
     position: absolute;
-    right: 15px;
-    top: 70%;
+    right: 24px;
+    top: 55%;
     color: #ccc;
     cursor: pointer;
     transform: translateY(-50%);
@@ -131,9 +76,6 @@ ul {
     float:left;
     position: relative;
     position: absolute;
-}
-.cartimg{
-    
 }
 .owl-carousel .owl-stage-outer {
   margin: 0 -5px;
@@ -1945,7 +1887,6 @@ li.megamenu-img a {
 .hot-product2 .count p {
   color: #fff;
   display: inline-block;
-  float: left;
   font-size: 13px;
   font-weight: 700;
   line-height: 1;
@@ -3730,7 +3671,6 @@ p.checkout-coupon input[type="submit"] {
     height: 37px;
     line-height: 35px;
 }
-.checkout-form-list {}
 .checkout-form-list input[type="checkbox"] {
     display: inline-block;
     height: inherit;
@@ -4081,7 +4021,6 @@ p.checkout-coupon input[type="submit"] {
     box-shadow: none;
     color: #fff;
     display: inline-block;
-    float: left;
     font-size: 12px;
     font-weight: 600;
     height: 40px;
