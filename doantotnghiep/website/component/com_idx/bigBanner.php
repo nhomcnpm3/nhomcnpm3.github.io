@@ -9,11 +9,11 @@
                     
                     <div class="banner-box">
                         <div class="col-img">
-                            <a href="#"><img src="<?php echo $level.img_banner_path.$value["img1"];?>" alt="banner 3"></a>
+                            <a href="#"><img src="<?php echo $level.img_banner_path.$value["url"];?>" alt="banner 3"></a>
                         </div>
                         <?php if($count%2!=0){?>
                         <div class="col-img">
-                            <a href="#"><img src="<?php echo $level.img_banner_path.$value["img2"];?>" alt="banner 3"></a>
+                            <a href="#"><img src="<?php echo $level.img_banner_path.$value["url"];?>" alt="banner 3"></a>
                         </div>
                         <?php } ?>
                     </div>

@@ -16,7 +16,15 @@
     $wishlist = false;
     $blog = false;
     $level= "";
-    include "DB/db_index.php";
+    include "SQL/index_FashionType.php";
+    include "SQL/index_Hotdeal.php";
+    include "SQL/index_Banner.php";    
+    include "SQL/index_ToysType.php";
+    include "SQL/index_ElectronicType.php";
+    include "SQL/index_BeautifyType.php";
+    include "SQL/index_FoodType.php";
+    include "SQL/index_SportType.php";
+    include "SQL/index_HouseholdType.php";
     $test=true;
     $index_layout=true;
     $err404_layout=false;

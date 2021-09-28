@@ -16,7 +16,7 @@
                                 <a class="nav-link" data-toggle="tab" href="#beauty2">Beauty</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#electronics2">Sport/Outdoor</a>
+                                <a class="nav-link" data-toggle="tab" href="#sport2">Sport/Outdoor</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#kids2">Living</a>
@@ -40,15 +40,15 @@
                             <!-- Arrivals Product Activation Start Here --1-- -->
                             <div class="best-seller-pro-active owl-carousel">
                             <?php $count=0;
-                                foreach($fashionarriv as $value)
+                                foreach($fashion_type as $value)
                                 {
                                 ?>
                                 <div class="single-product">
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
-                                            <a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
-                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img1"];?>" alt="single-product">
-                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img2"];?>" alt="single-product">
+                                        <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[ID_pro]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">                                        
+                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
+                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
                                             </a>
                                             <a href="#" class="quick_view" data-toggle="modal" data-target="#myModal" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
                                         </div>
@@ -56,8 +56,8 @@
                                         <!-- Product Content Start -->
                                         <div class="pro-content">
                                             <div class="pro-info">
-                                                <h4><a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>"><?php echo $value["tieude"];?></a></h4>
-                                                <p><span class="price">$<?php echo $value["GIASI2"];?></span></p>
+                                                <h4><a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>"><?php echo $value["name_product"];?></a></h4>
+                                                <p><span class="price">$<?php echo $value["sale"];?></span></p>
                                             </div>
                                             <div class="pro-actions">
                                                 <div class="actions-primary">
@@ -73,7 +73,7 @@
                                     </div>
                                     <?php 
                                         $count++;
-                                        if($count==4){break;}
+                                        if($count==5){break;}
                                         }
                                     ?>
                                 
@@ -87,15 +87,15 @@
                             <div class="best-seller-pro-active owl-carousel">
                                 <!-- Single Product Start -->
                                 <?php $count=0;
-                                foreach($babykidsarriv as $value)
+                                foreach($toys_type as $value)
                                 {
                                 ?>
                                 <div class="single-product">
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
-                                        <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[MASP]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
-                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img1"];?>" alt="single-product">
-                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img2"];?>" alt="single-product">
+                                        <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[ID_pro]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
+                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
+                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
                                             </a>
                                             <a href="#" class="quick_view" data-toggle="modal" data-target="#myModal" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
                                         </div>
@@ -103,8 +103,8 @@
                                         <!-- Product Content Start -->
                                         <div class="pro-content">
                                             <div class="pro-info">
-                                                <h4><a href="<?php echo $level.page_path."product.php"?>"><?php echo $value["tieude"];?></a></h4>
-                                                <p><span class="price">$<?php echo $value["GIASI2"];?></span></p>
+                                                <h4><a href="<?php echo $level.page_path."product.php"?>"><?php echo $value["name_product"];?></a></h4>
+                                                <p><span class="price">$<?php echo $value["sale"];?></span></p>
                                             </div>
                                             <div class="pro-actions">
                                                 <div class="actions-primary">
@@ -120,7 +120,7 @@
                                     </div>
                                     <?php 
                                         $count++;
-                                        if($count==4){break;}
+                                        if($count==5){break;}
                                         }
                                     ?>
 
@@ -135,15 +135,16 @@
                             <div class="best-seller-pro-active owl-carousel">
                                 <!-- Single Product Start -->
                                 <?php $count=0;
-                                foreach($beautyarriv as $value)
+                                foreach($beautify_type as $value)
                                 {
                                 ?>
                                 <div class="single-product">
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
+                                        <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[ID_pro]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
                                             <a href="<?php echo $level.page_path."product.php"?>">
-                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img1"];?>" alt="single-product">
-                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img2"];?>" alt="single-product">
+                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
+                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
                                             </a>
                                             <a href="#" class="quick_view" data-toggle="modal" data-target="#myModal" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
                                         </div>
@@ -151,8 +152,8 @@
                                         <!-- Product Content Start -->
                                         <div class="pro-content">
                                             <div class="pro-info">
-                                                <h4><a href="<?php echo $level.page_path."product.php"?>"><?php echo $value["tieude"];?></a></h4>
-                                                <p><span class="price">$<?php echo $value["GIASI2"];?></span></p>
+                                                <h4><a href="<?php echo $level.page_path."product.php"?>"><?php echo $value["name_product"];?></a></h4>
+                                                <p><span class="price">$<?php echo $value["sale"];?></span></p>
                                             </div>
                                             <div class="pro-actions">
                                                 <div class="actions-primary">
@@ -168,7 +169,7 @@
                                     </div>
                                     <?php 
                                         $count++;
-                                        if($count==4){break;}
+                                        if($count==5){break;}
                                         }
                                     ?>
 
@@ -183,15 +184,15 @@
                                 <!-- Single Product Start -->
                                 
                                 <?php $count=0;
-                                foreach($electronicarriv as $value)
+                                foreach($electronic_type as $value)
                                 {
                                 ?>
                                 <div class="single-product">
                                         <!-- Product Image Start -->
                                         <div class="pro-img">
-                                        <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[MASP]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
-                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img1"];?>" alt="single-product">
-                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img2"];?>" alt="single-product">
+                                        <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[ID_pro]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
+                                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
+                                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
                                             </a>
                                             <a href="#" class="quick_view" data-toggle="modal" data-target="#myModal" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
                                         </div>
@@ -199,12 +200,12 @@
                                         <!-- Product Content Start -->
                                         <div class="pro-content">
                                             <div class="pro-info">
-                                                <h4><a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>"><?php echo $value["tieude"];?></a></h4>
-                                                <p><span class="price">$<?php echo $value["GIASI2"];?></span></p>
+                                                <h4><a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>"><?php echo $value["name_product"];?></a></h4>
+                                                <p><span class="price">$<?php echo $value["sale"];?></span></p>
                                             </div>
                                             <div class="pro-actions">
                                                 <div class="actions-primary">
-                                                <form method="post" <?php if($id!='') { ?> action="page/cart.php?idsp=<?php echo $value['MASP']; ?>" <?php  } else { ?> action="page/login.php" <?php } ?>>
+                                                <form method="post" <?php if($id!='') { ?> action="page/cart.php?idsp=<?php echo $value['ID_pro']; ?>" <?php  } else { ?> action="page/login.php" <?php } ?>>
                                                       <input style="width:100%;height:30px"type="submit"  name="addcart" value="+ Add To Cart"/>
 
                                                          </form>
@@ -219,7 +220,7 @@
                                     </div>
                                     <?php 
                                         $count++;
-                                        if($count==4){break;}
+                                        if($count==5){break;}
                                         }
                                     ?>
                                 <!-- Single Product End -->

@@ -15,12 +15,12 @@
                         <!-- Brand Banner Start -->
                         <div class="brand-banner owl-carousel">
                         <?php
-                            foreach($bannerend as $value)
+                            foreach($banner as $value)
                             {?>
                             <div class="single-brand">
-                                <a href="#"><img class="img" src="<?php echo $level.img_brand_path.$value["img1"]?>" alt="brand-image"></a>
-                                <a href="#"><img src="<?php echo $level.img_brand_path.$value["img2"]?>" alt="brand-image"></a>
-                                <a href="#"><img src="<?php echo $level.img_brand_path.$value["img3"]?>" alt="brand-image"></a>
+                                <a href="#"><img class="img" src="<?php echo $level.img_brand_path.$value["url"]?>" alt="brand-image"></a>
+                                <a href="#"><img src="<?php echo $level.img_brand_path.$value["url"]?>" alt="brand-image"></a>
+                                <a href="#"><img src="<?php echo $level.img_brand_path.$value["url"]?>" alt="brand-image"></a>
                             </div>
                         <?php }?>
                         </div>

@@ -8,14 +8,14 @@
                 <!-- Hot Deal Product Activation Start -->
                 <div class="hot-deal-active owl-carousel">
                 <?php $count=0;
-                    foreach($products as $value){
+                    foreach($hotdeal as $value){
                     ?>
                         <div class="single-product">
                         <!-- Product Image Start -->
                         <div class="pro-img">
-                            <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[MASP]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
-                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img1"];?>" alt="single-product">
-                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img2"];?>" alt="single-product">
+                            <a href= "<?php if($id!='') { ?><?php echo $level."page/product.php?idsp=$value[ID_pro]"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>">
+                                <img class="primary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
+                                <img class="secondary-img" src="<?php echo $level.img_product_path.$value["img"];?>" alt="single-product">
                             </a>
                             <div class="countdown" data-countdown="2020/03/01"></div>
                             <a href="#" class="quick_view" data-toggle="modal" data-target="#myModal" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
@@ -24,13 +24,13 @@
                         <!-- Product Content Start -->
                         <div class="pro-content">
                             <div class="pro-info">
-                                <h4><a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>"><?php echo $value["tieude"];?></a></h4>
-                                <p><span class="price">$<?php echo $value["GIASI2"];?></span><del class="prev-price">$<?php echo $value["GIASI1"]?></del></p>
+                                <h4><a href="<?php if($id!='') { ?><?php echo $level."page/product.php"?> <?php  } else { ?> <?php echo $level."page/login.php"?> <?php } ?>"><?php echo $value["name_product"];?></a></h4>
+                                <p><span class="price">$<?php echo $value["sale"];?></span><del class="prev-price">$<?php echo $value["price"]?></del></p>
                                 <div class="label-product l_sale"><?php echo $value["sale"];?><span class="symbol-percent">%</span></div>
                             </div>
                             <div class="pro-actions">
                                 <div class="actions-primary">
-                                    <form method="post" <?php if($id!='') { ?> action="page/cart.php?idsp=<?php echo $value['MASP']; ?>" <?php  } else { ?> action="page/login.php" <?php } ?>>
+                                    <form method="post" <?php if($id!='') { ?> action="page/cart.php?idsp=<?php echo $value['ID_pro']; ?>" <?php  } else { ?> action="page/login.php" <?php } ?>>
                                         <input style="width:100%;height:30px"type="submit"  name="addcart" value="+ Add To Cart"/>
 
                                     </form>
