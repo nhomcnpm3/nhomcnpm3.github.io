@@ -1,5 +1,6 @@
 ﻿<?php
-    $id=isset($_COOKIE["id"]) ? $_COOKIE["id"] : '';
+unset($_SESSION['fogot']);unset($_SESSION['phone']);unset($_SESSION['otp']);
+$id=isset($_COOKIE["id"]) ? $_COOKIE["id"] : '';
     $err = false;
     $about = false;
     $cart = false;

@@ -2,7 +2,7 @@
 class DP{
     private static function connect_DB(){
         $host = 'localhost';
-        $dbname= 'doan_totnghiep';
+        $dbname= 'quanlibanhang';
         $us= 'root';
         $pass ='';
         try{
